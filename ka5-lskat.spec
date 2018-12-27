@@ -1,18 +1,33 @@
-%define		kdeappsver	18.04.0
-%define		qtver		5.3.2
+%define		kdeappsver	18.12.0
+%define		qtver		5.9.0
 %define		kaname		lskat
 Summary:	lskat
 Name:		ka5-%{kaname}
-Version:	18.04.0
+Version:	18.12.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	f02664f255a40300f3d89e26108bc80c
+# Source0-md5:	fb6f6565d1b3aa9172083ec2e4e2b556
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
+BuildRequires:	Qt5Gui-devel
+BuildRequires:	Qt5Qml-devel >= 5.11.1
+BuildRequires:	Qt5Quick-devel >= 5.11.1
+BuildRequires:	Qt5Svg-devel
+BuildRequires:	Qt5Widgets-devel
 BuildRequires:	cmake >= 2.8.12
-BuildRequires:	kf5-extra-cmake-modules >= 1.4.0
+BuildRequires:	gettext-devel
+BuildRequires:	ka5-libkdegames-devel >= 18.12.0
+BuildRequires:	kf5-extra-cmake-modules >= 5.53.0
+BuildRequires:	kf5-kconfig-devel >= 5.30.0
+BuildRequires:	kf5-kcoreaddons-devel >= 5.30.0
+BuildRequires:	kf5-kcrash-devel >= 5.30.0
+BuildRequires:	kf5-kdoctools-devel >= 5.30.0
+BuildRequires:	kf5-kguiaddons-devel >= 5.30.0
+BuildRequires:	kf5-ki18n-devel >= 5.30.0
+BuildRequires:	kf5-kwidgetsaddons-devel >= 5.30.0
+BuildRequires:	kf5-kxmlgui-devel >= 5.30.0
 BuildRequires:	qt5-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
@@ -21,7 +36,9 @@ BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-lskat.
+Lieutnant Skat (from German "Offiziersskat") is a fun and engaging
+card game for two players, where the second player is either live
+opponent, or a built in artificial intelligence.
 
 %prep
 %setup -q -n %{kaname}-%{version}
