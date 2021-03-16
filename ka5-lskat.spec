@@ -1,15 +1,15 @@
-%define		kdeappsver	19.04.1
+%define		kdeappsver	20.12.3
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		lskat
 Summary:	lskat
 Name:		ka5-%{kaname}
-Version:	19.04.1
+Version:	20.12.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	0f1f228354d615d94f6c3ebe07ac6704
+Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	963d1ef4ffd2d59883de1ca2515bef61
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel
@@ -67,7 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-/etc/xdg/lskat.categories
 %attr(755,root,root) %{_bindir}/lskat
 %{_desktopdir}/org.kde.lskat.desktop
 %{_iconsdir}/hicolor/128x128/apps/lskat.png
@@ -79,3 +78,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kxmlgui5/lskat
 %{_datadir}/lskat
 %{_datadir}/metainfo/org.kde.lskat.appdata.xml
+%{_datadir}/qlogging-categories5/lskat.categories
