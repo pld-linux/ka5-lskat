@@ -42,6 +42,11 @@ Lieutnant Skat (from German "Offiziersskat") is a fun and engaging
 card game for two players, where the second player is either live
 opponent, or a built in artificial intelligence.
 
+%description -l pl.UTF-8
+Lieutnant Skat (z niemieckiego "Offiziersskat") jest zabawną
+i wciągającą grą karcianą dla dwóch graczy, gdzie drugi gracz może
+być albo żywym rywalem, albo opartym na sztucznej inteligencji.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
