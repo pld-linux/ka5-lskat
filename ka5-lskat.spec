@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	23.08.4
+%define		kdeappsver	23.08.5
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		lskat
 Summary:	lskat
 Name:		ka5-%{kaname}
-Version:	23.08.4
+Version:	23.08.5
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	3ccc9ba0be58e1883d0b6a9f6da53502
+# Source0-md5:	2c6a20e3a5973585ec409a490e64988c
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel
